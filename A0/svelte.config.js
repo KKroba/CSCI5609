@@ -4,7 +4,7 @@ const config = {
     kit: {
         adapter: adapter(),
         paths: {
-            base: '/CSCI5609/A0'
+            base: '/CSCI5609'
         }
     }
 };
