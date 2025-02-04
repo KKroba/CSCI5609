@@ -1,5 +1,6 @@
 <script>
-    let clicks = 5;  
+    let clicks = 5;
+    let maxClicks = 5;
     
     function handleClick() {
         if(clicks <= 0) {
@@ -10,8 +11,7 @@
     }
     
     function changeMax() {
-        let max = Number(document.getElementById('maxSelect').value);
-        clicks = max;
+        clicks = Number(document.getElementById('maxSelect').value);
     }
 </script>
 
@@ -33,20 +33,15 @@
 </div>
 
 <style>
-    .counter {
-        text-align: center;
-        margin-top: 50px;
-    }
+    .counter { text-align: center; margin-top: 50px; }
     .btn {
         background: #44aa66;
         font-size: xx-large;
         padding: 10px;
-        cursor: pointer;
         border: 2px solid black;
         display: inline-block;
         margin: 15px 0;
+        cursor: pointer;
     }
-    .logo {
-        width: 150px;
-    }
+    .logo { width: 150px; }
 </style>

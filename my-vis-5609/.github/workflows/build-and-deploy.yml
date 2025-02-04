@@ -1,11 +1,11 @@
-name: Build and Deploy
+name: Deploy to GitHub
 on:
   push:
     branches: ['main']
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -16,7 +16,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/configure-pages@v1
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -26,6 +25,4 @@ jobs:
       - uses: actions/upload-pages-artifact@v1
         with:
           path: 'build/'
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - uses: actions/deploy-pages@v1
