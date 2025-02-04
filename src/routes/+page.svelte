@@ -1,5 +1,5 @@
 <script>
-    let clicks = 5;  // 剩余点击次数
+    let clicks = 5;  
     
     function handleClick() {
         if(clicks <= 0) {
@@ -26,8 +26,8 @@
         Max clicks: 
         <select id="maxSelect" on:change={changeMax}>
             <option>5</option>
+            <option>8</option>
             <option>10</option>
-            <option>15</option>
         </select>
     </div>
 </div>
